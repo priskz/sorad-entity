@@ -1,0 +1,24 @@
+{
+    "name": "priskz/sorad-entity",
+    "description": "A generic service implemented on top of the SORAD API + PaylORM that provides consistent conventions for facilitating the mapping of entities.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Zachary Prisk",
+          "email": "zachary.prisk@gmail.com"
+        }
+    ],
+    "require": {
+        "priskz/payload": "~0.0.1",
+        "priskz/sorad-api": "~0.0.1",
+        "priskz/sorad-service-provider": "~0.0.1",
+        "priskz/paylorm": "~0.0.1",
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Priskz\\SORAD\\Entity\\": "src/Priskz/SORAD/Entity"
+        }
+    }
+}
