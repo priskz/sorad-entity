@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Domain\Reference\Repository;
+<?php
+
+namespace Priskz\SORAD\Entity\Domain\Reference\Repository;
 
 use Priskz\Paylorm\Data\MySQL\Eloquent\CrudRepository;
 

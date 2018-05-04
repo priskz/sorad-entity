@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Identifier\Laravel;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Identifier\Laravel;
 
 use Priskz\SORAD\ServiceProvider\Laravel\AbstractServiceProvider as SORADServiceProvider;
 use Priskz\SORAD\Entity\Domain\Identifier\Repository\CRUD as DataSource;

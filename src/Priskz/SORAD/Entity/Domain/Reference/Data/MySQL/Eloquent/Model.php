@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Domain\Reference\Data\MySQL\Eloquent;
+<?php
+
+namespace Priskz\SORAD\Entity\Domain\Reference\Data\MySQL\Eloquent;
 
 use Priskz\Paylorm\Data\MySQL\Eloquent\SoftDeleteableModel as DataModel;
 

@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Root\Laravel;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Root\Laravel;
 
 use Config;
 use Priskz\SORAD\ServiceProvider\Laravel\AbstractRootServiceProvider as RootServiceProvider;

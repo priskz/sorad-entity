@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Root\Laravel;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Root\Laravel;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 use Priskz\SORAD\Entity\Service\Root\Laravel\ServiceProvider;

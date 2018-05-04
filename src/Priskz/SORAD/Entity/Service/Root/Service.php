@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Root;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Root;
 
 use Priskz\Payload\Payload;
 use Priskz\SORAD\Service\Laravel\GenericService;

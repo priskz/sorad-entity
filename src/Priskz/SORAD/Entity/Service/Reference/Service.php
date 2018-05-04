@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Reference;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Reference;
 
 use Priskz\SORAD\Entity\Domain\Reference\Laravel\CrudRepository as DataSource;
 use Priskz\SORAD\Service\Laravel\GenericCrudService;

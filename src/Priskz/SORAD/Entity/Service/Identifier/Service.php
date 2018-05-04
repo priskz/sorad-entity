@@ -1,4 +1,6 @@
-<?php namespace Priskz\SORAD\Entity\Service\Identifier;
+<?php
+
+namespace Priskz\SORAD\Entity\Service\Identifier;
 
 use Log;
 use Illuminate\Database\QueryException;
