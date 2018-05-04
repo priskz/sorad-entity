@@ -10,10 +10,10 @@
         }
     ],
     "require": {
-        "priskz/payload": "~0.0.1",
-        "priskz/sorad-api": "~0.0.1",
-        "priskz/sorad-service-provider": "~0.0.1",
-        "priskz/paylorm": "~0.0.1",
+        "priskz/payload": "~0.1.0",
+        "priskz/sorad-api": "~0.1.0",
+        "priskz/sorad-service-provider": "~0.1.0",
+        "priskz/paylorm": "~0.1.0",
         "php": ">=5.4.0"
     },
     "autoload": {

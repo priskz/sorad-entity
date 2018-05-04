@@ -10,7 +10,7 @@ Add the following to your "require" schema:
 
 ```
 "require": {
-     "priskz/sorad-entity": "~0.0.1"
+     "priskz/sorad-entity": "~0.1.0"
 }
 ```
 
