@@ -3,9 +3,9 @@
 namespace Priskz\SORAD\Entity\Service\Root;
 
 use Priskz\Payload\Payload;
-use Priskz\SORAD\Service\Laravel\GenericService;
 use Priskz\SORAD\Entity\Service\Identifier\Laravel\ServiceProvider as IdentifierServiceProvider;
 use Priskz\SORAD\Entity\Service\Reference\Laravel\ServiceProvider as ReferenceServiceProvider;
+use Priskz\SORAD\Service\Laravel\GenericService;
 
 class Service extends GenericService
 {
@@ -131,7 +131,7 @@ class Service extends GenericService
 		// Process the given data.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -153,7 +153,7 @@ class Service extends GenericService
 		// Process data given.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -175,7 +175,7 @@ class Service extends GenericService
 		// Process data given.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -273,7 +273,7 @@ class Service extends GenericService
 		// Process data given.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -311,7 +311,7 @@ class Service extends GenericService
 		// Process data given.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -352,7 +352,7 @@ class Service extends GenericService
 		// Process the given data.
 		$processPayload = $this->process(__FUNCTION__, $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
@@ -422,7 +422,7 @@ class Service extends GenericService
 		// Process the given data.
 		$processPayload = $this->process('DELETE_REFERENCE', $data);
 
-		if($processPayload->getStatus() != 'valid')
+		if( ! $processPayload->isStatus(Payload::STATUS_VALID))
 		{
 			return $processPayload;
 		}
