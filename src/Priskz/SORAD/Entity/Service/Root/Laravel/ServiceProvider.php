@@ -42,7 +42,7 @@ class ServiceProvider extends RootServiceProvider
 
 	/**
 	 * @OVERRIDE
-	 * 
+	 *
 	 * Get the services provided by this provider.
 	 *
 	 * @return array
@@ -67,7 +67,7 @@ class ServiceProvider extends RootServiceProvider
 
 	/**
 	 * @OVERRIDE
-	 * 
+	 *
 	 * Register.
 	 *
 	 * @return void
@@ -119,7 +119,7 @@ class ServiceProvider extends RootServiceProvider
 
 	/**
 	 * @OVERRIDE
-	 * 
+	 *
 	 * Link Aggreagte Service(s) to be resolved when this service is resolved.
 	 *
 	 * @return void

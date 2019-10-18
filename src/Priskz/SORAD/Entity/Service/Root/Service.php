@@ -159,9 +159,9 @@ class Service extends GenericService
 		}
 
 		// Get a properly formatted Entity Class string.
-		$entityContext = $this->formatEntityType($processPayload->getData('entity_type'));
+		$entityContext = $this->formatEntityType($processPayload->get('entity_type'));
 
-		return $this->aggregate[$entityContext]->get($processPayload->getData('filter'), $processPayload->getData('sort'), $processPayload->getData('field'), $processPayload->getData('embed'));
+		return $this->aggregate[$entityContext]->get($processPayload->get('filter'), $processPayload->get('sort'), $processPayload->get('field'), $processPayload->get('embed'));
 	}
 
 	/**
@@ -181,7 +181,7 @@ class Service extends GenericService
 		}
 
 		// Get a properly formatted Entity Class string.
-		$entityContext = $this->formatEntityType($processPayload->getData('entity_type'));
+		$entityContext = $this->formatEntityType($processPayload->get('entity_type'));
 
 		// Create the entity with the given data.
 		$entityPayload = $this->aggregate[$entityContext]->create($processPayload->getData());
@@ -279,10 +279,10 @@ class Service extends GenericService
 		}
 
 		// Get a properly formatted Entity Class string.
-		$entityContext = $this->formatEntityType($processPayload->getData('entity_type'));
+		$entityContext = $this->formatEntityType($processPayload->get('entity_type'));
 
 		// Find Entity(s).
-		$identifierPayload = $this->aggregate[IdentifierServiceProvider::getProviderKey()]->get([['field' => 'uuid', 'value' => $processPayload->getData('uuid'), 'operator' => '=', 'or' => false]]);
+		$identifierPayload = $this->aggregate[IdentifierServiceProvider::getProviderKey()]->get([['field' => 'uuid', 'value' => $processPayload->get('uuid'), 'operator' => '=', 'or' => false]]);
 
 		if($identifierPayload->getStatus() != 'found')
 		{
@@ -317,10 +317,10 @@ class Service extends GenericService
 		}
 
 		// Get a properly formatted Entity Class string.
-		$entityContext = $this->formatEntityType($processPayload->getData('entity_type'));
+		$entityContext = $this->formatEntityType($processPayload->get('entity_type'));
 
 		// Find Entity(s).
-		$identifierPayload = $this->aggregate[IdentifierServiceProvider::getProviderKey()]->get([['field' => 'uuid', 'value' => $processPayload->getData('uuid'), 'operator' => '=', 'or' => false]]);
+		$identifierPayload = $this->aggregate[IdentifierServiceProvider::getProviderKey()]->get([['field' => 'uuid', 'value' => $processPayload->get('uuid'), 'operator' => '=', 'or' => false]]);
 
 		if($identifierPayload->getStatus() != 'found')
 		{
@@ -365,10 +365,10 @@ class Service extends GenericService
 		}
 
 		// Either get an existing entity with uuid given or create a new one with data given.
-		if(array_key_exists('uuid', $processPayload->getData('reference')))
+		if(array_key_exists('uuid', $processPayload->get('reference')))
 		{
 			// @todo: Make this more consistent - returns a collection.
-			$referencePayload = $this->getOneByUuid($processPayload->getData('reference')['uuid']);
+			$referencePayload = $this->getOneByUuid($processPayload->get('reference')['uuid']);
 
 			if($referencePayload->getStatus() != 'found')
 			{
@@ -378,9 +378,9 @@ class Service extends GenericService
 			// @todo: Make this more consistent - extra instanciating.
 			$referencePayload = new Payload($referencePayload->getData(), 'found');
 		}
-		elseif(array_key_exists('reference_type', $processPayload->getData('reference')))
+		elseif(array_key_exists('reference_type', $processPayload->get('reference')))
 		{
-			$referencePayload = $this->create(['entity_type' => $processPayload->getData('reference')['reference_type']] + $processPayload->getData('reference'));
+			$referencePayload = $this->create(['entity_type' => $processPayload->get('reference')['reference_type']] + $processPayload->get('reference'));
 
 			if($referencePayload->getStatus() != 'created')
 			{
